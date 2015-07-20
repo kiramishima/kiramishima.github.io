@@ -1,10 +1,6 @@
 
 # Phonegap Workshop
 
-From the terminal, pop in:
+## Paúl Arizpe
 
-  ```yo reveal:slide "Slide Title"```
-
-Available options:
-
- ```--markdown --attributes --notes```
+### @kiramishima
