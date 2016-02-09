@@ -18,7 +18,7 @@ export default class Skills extends Component {
 	componentDidMount() {
 		(async () => {
 			console.log(1222)
-			const response = await fetch('./skills.json')
+			const response = await fetch('./build/skills.json')
 			const json = await response.json()
 			console.log(json)
 			this.setState(json)
