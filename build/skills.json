@@ -1,0 +1,8 @@
+{
+	"skills": [
+		{"name": "PHP", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2000px-PHP-logo.svg.png"}, 
+		{"name": "Javascript", "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"}, 
+		{"name": "C#", "logo": "http://cdn-scriptbc.scriptbc.netdna-cdn.com/wp-content/uploads/2015/08/logo.png"}, 
+		{"name": "Go", "logo": "https://golang.org/doc/gopher/frontpage.png"}
+	]
+}

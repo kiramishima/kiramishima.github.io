@@ -1,0 +1,39 @@
+{
+  "name": "kiramishima.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiramishima/kiramishima.github.io.git"
+  },
+  "author": "kiramishima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiramishima/kiramishima.github.io/issues"
+  },
+  "homepage": "https://github.com/kiramishima/kiramishima.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-transform-runtime": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.5.0",
+    "babel-runtime": "^6.5.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
