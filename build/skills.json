@@ -20,6 +20,16 @@
 			"name": "Go", 
 			"logo": "https://golang.org/doc/gopher/frontpage.png",
 			"knowledge": ["Gin", "Martini", "Gorilla Mux", "Negroni"]
-		}
+		},
+        {
+            "name": "Python",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png",
+            "knowledge": ["Basic"]
+        },
+        {
+            "name": "Ruby",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1000px-Ruby_logo.svg.png",
+            "knowledge": ["Basic", "Railsv2"]
+        }
 	]
 }
