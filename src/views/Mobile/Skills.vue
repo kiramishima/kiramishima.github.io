@@ -3,13 +3,8 @@
         <v-container fluid grid-list-md>
             <v-layout row>
                 <v-flex xs12>
-                    {{ $t("menus.works") }}
-                    <v-radar
-                        :stats="stats"
-                        :polycolor="polycolor"
-                        :radar="radar"
-                        :scale="scale">
-                    </v-radar>
+                    {{ $t("menus.skills") }}
+                    <RadarChart v-bind:W="300" v-bind:H="300" v-bind:D="stats"/>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -18,14 +13,14 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import Radar from 'vue-radar';
-
+import RadarChart from '../../components/RadarChart.vue';
 @Component({
     components: {
-        'v-radar': Radar
+        RadarChart
     }
 })
 export default class SkillsComponent extends Vue {
+    @Prop() public stats !: Array<any>;
     public radar: any = {
         size: '300',
         structure: {
@@ -49,38 +44,15 @@ export default class SkillsComponent extends Vue {
         }
     };
     public scale: any = {};
-    public stats:any = [                            // at least 3 stats are required here
-        {
-            name: 'stat1',              // string
-            value: 90,                  // int
-            shortName: 'PHP'
-        },
-        {
-            name: 'stat2',
-            value: 80,
-            shortName: 'Golang'
-        },
-        {
-            name: 'stat3',
-            value: 70,
-            shortName: 'C#'
-        },
-        {
-            name: 'stat3',
-            value: 35,
-            shortName: 'F#'
-        },
-        {
-            name: 'stat3',
-            value: 90,
-            shortName: 'JS'
-        },
-        {
-            name: 'stat3',
-            value: 30,
-            shortName: 'Python'
-        }
-    ];
+    
     public polycolor:string = 'rgba(250, 100, 50, .5)';
+
+    mounted() {
+        console.log(this.stats);
+    }
 }
 </script>
+
+<style lang="sass">
+</style>
+

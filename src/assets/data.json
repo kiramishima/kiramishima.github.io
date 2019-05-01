@@ -1,5 +1,15 @@
 {
     "picture": "https://avatars2.githubusercontent.com/u/12620426?s=460&v=4",
     "name": "Paul Emilio",
-    "lastname": "Arizpe Colorado"
+    "lastname": "Arizpe Colorado",
+    "skills_langs": [
+        [
+            {"value": 0.9, "axis": "PHP"},
+            {"value": 0.85, "axis": "Go"},
+            { "value": 0.7, "axis": "C#"},
+            {"value": 0.35, "axis": "F#"},
+            {"value": 0.9, "axis": "JS"},
+            {"value": 0.35, "axis": "Python"}
+        ]
+    ]
 }
