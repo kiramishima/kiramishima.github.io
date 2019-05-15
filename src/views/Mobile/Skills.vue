@@ -4,7 +4,6 @@
             <v-layout row>
                 <v-flex xs12>
                     {{ $t("menus.skills") }}
-                    <RadarChart v-bind:W="300" v-bind:H="300" v-bind:D="stats"/>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -13,11 +12,10 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import RadarChart from '../../components/RadarChart.vue';
+import { Radar } from 'vue-chartjs';
+
 @Component({
-    components: {
-        RadarChart
-    }
+    components: {}
 })
 export default class SkillsComponent extends Vue {
     @Prop() public stats !: Array<any>;
