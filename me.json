@@ -1,0 +1,32 @@
+{
+  "networks" : [
+    {
+      "network": "github-alt",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "dev",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "linkedin",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "stack-overflow",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "medium",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "twitch",
+      "url": "https://github.com/kiramishima"
+    },
+    {
+      "network": "youtube",
+      "url": "https://github.com/kiramishima"
+    }
+  ]
+}
