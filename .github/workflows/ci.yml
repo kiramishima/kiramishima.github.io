@@ -40,7 +40,7 @@ jobs:
         run: npm ci
 
       - name: Build Page
-        run: npm run build
+        run: npm run generate
 
       - name: Deploy to GH Pager
         uses: peaceiris/actions-gh-pages@v3
