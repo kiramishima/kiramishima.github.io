@@ -39,8 +39,11 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: npm ci
 
-      - name: Run linter 👀
-        run: npm run lint
+      - name: Build Page
+        run: npm run build
 
-      - name: Run tests 🧪
-        run: npm run test
+      - name: Deploy to GH Pager
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GHTOKEN }}
+          publish_dir: ./.nuxt

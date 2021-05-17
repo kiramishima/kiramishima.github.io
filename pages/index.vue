@@ -1,80 +1,45 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        kiramishima.github.com
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <section class="bg-indigo-600 w-screen h-screen">
+    <div class="place-self-center hidden lg:block">
+      <button-start v-on:status="onBtnStartGameClicked"/>
+    </div>
+    <networks-list v-if="me" :networks="me.networks" />
+    <div class="flex-1 flex flex-col justify-center bg-white px-10 w-full lg:w-9/12 lg:m-auto">
+      <div class="mt-2">
+        <p class="text-3xl text-center font-bold font-sans">Paul Arizpe</p>
+        <p class="text-lg text-center font-light font-sans">Mexico, Mexique</p>
+        <p class="text-lg text-center font-normal font-sans">(+521) 55-7949-0619</p>
+        <p class="text-lg text-center font-light font-sans">kiramishima@outlook.com</p>
       </div>
     </div>
-  </div>
+    <objetif />
+    <competences-list />
+    <experience-list />
+  </section>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
+import '@fortawesome/fontawesome-free/js/all'
+import { Me } from '~/models/me'
 
-export default Vue.extend({})
+@Component
+export default class Index extends Vue {
+  me: Me | null = null
+
+  async onBtnStartGameClicked(ev: any) {
+    console.log({ ev })
+
+    await this.loadData()
+  }
+
+  async loadData() {
+    try {
+      const response = await this.$axios.get<Me>('/me.json').then(r => r.data)
+      this.me = response
+    } catch (ex) {
+      console.error(ex)
+    }
+  }
+}
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
